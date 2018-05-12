@@ -1,16 +1,9 @@
 #include <stdio.h>
 #include <stdio_ext.h>
 #include <ctype.h>
-#include "../include/minus.h"
-#include "../include/division.h"
-#include "../include/multiply.h"
-#include "../include/sum.h"
+#include "operators.h"
 
 #define EXIT 'e'
-#define MINUS '-'
-#define SUM '+'
-#define MULTIPLY '*'
-#define DIVISION '/'
 
 void banner();
 void menu();
@@ -29,8 +22,10 @@ int main()
         {
             printf("Insert first number: ");
             scanf("%f", &x);
+            __fpurge(stdin);
             printf("Insert second number: ");
             scanf("%f", &y);
+            __fpurge(stdin);
             
             switch(option)
             {
@@ -79,5 +74,6 @@ void menu(int *option)
     printf("*                    *\n");
     printf("**********************\n\n");
     printf("Option: ");
+    __fpurge(stdin);
     *option = getchar();
 }

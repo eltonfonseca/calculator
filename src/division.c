@@ -1,13 +1,12 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include "../include/division.h"
+#include <stdio.h>
 
 double division(float x, float y)
 {
-    if(y == 0.0)
+    if(y == 0)
     {
-        printf("Error: Division by zero!");
-        exit(1);
+        printf("Divisão por Zero!\n");
+        exit(0);
     }
     else
         return x / y;
