@@ -1,5 +1,4 @@
 CC=gcc
-NULL=/dev/null
 EXEC=calculator
 FOLDER_LIB=lib
 FOLDER_INCLUDE=include
